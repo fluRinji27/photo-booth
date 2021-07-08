@@ -1,0 +1,26 @@
+@mixin robotoSlab($fz,$fw,$lh,$ls) {
+  font-family: Roboto-Slab,sans-serif;
+  font-size: $fz;
+  font-style: normal;
+  font-weight: $fw;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+@mixin robotoRegular($fz,$fw,$lh,$ls) {
+  font-family: Roboto-Regular,sans-serif;;
+  font-size: $fz;
+  font-style: normal;
+  font-weight: $fw;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+
+@mixin workSans($fz,$fw,$lh,$ls) {
+  font-family: WorkSans,sans-serif;;
+  font-size: $fz;
+  font-style: normal;
+  font-weight: $fw;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+
