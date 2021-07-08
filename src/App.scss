@@ -1,0 +1,49 @@
+@import "assets/_variables";
+@import 'assets/_mixins';
+
+body {
+  box-sizing: border-box;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+.App {
+  max-width: 375px;
+  margin: 0 auto;
+  overflow: auto;
+
+  &_theme_overflow_hidden {
+    overflow: hidden;
+  }
+}
+
+.title {
+  &__h2 {
+    @include robotoSlab(32px, 700, 42px, 0);
+  }
+}
+
+.wrapper {
+  //padding: 0 13px;
+  margin: 0 13px;
+}
+
+.main {
+  margin-top: 20px;
+}
+
+.arrow {
+  width: 10px;
+  height: 10px;
+  border-top: 1.5px solid black;
+  border-right: 1.5px solid black;
+  transform: rotate(135deg);
+
+  &_left {
+    transform: rotate(-135deg);
+  }
+
+  &_right {
+    transform: rotate(45deg);
+  }
+}

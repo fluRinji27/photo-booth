@@ -1,0 +1,35 @@
+@import "../../../assets/_variables";
+@import "../../../assets/_mixins";
+
+.catalog-item {
+  margin-right: 0;
+
+  &__title {
+    margin-top: 8px;
+    @include workSans(20.6px, 600, 23px, .2px);
+  }
+
+  &__subtitle {
+    margin-top: 10px;
+    @include workSans(12px, 500, 14px, .3px);
+    span{
+      color: $gray;
+    }
+  }
+
+  &__time-choice {
+  }
+
+  &__time {
+  }
+
+  &__order {
+  }
+
+  &__price {
+    color: $red;
+  }
+
+  &__btn-submit {
+  }
+}

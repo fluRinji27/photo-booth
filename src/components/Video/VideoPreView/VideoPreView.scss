@@ -1,0 +1,22 @@
+.preView {
+  position: relative;
+  z-index: 2;
+  width: 315px;
+  height: 188px;
+
+  &__wrapper {
+    display: flex;
+    position: absolute;
+    top: 31%;
+    left: 39.9%;
+    padding: 26px;
+    background-color: #fff;
+    border-radius: 100%;
+  }
+
+  &__img {
+    border-radius: 8px;
+    width: inherit;
+    height: inherit;
+  }
+}

@@ -1,0 +1,28 @@
+@import '../../assets/_variables';
+@import '../../assets/_mixins';
+
+.sort {
+  display: flex;
+  align-items: center;
+  margin-top: 1em;
+  @include workSans(14px,500,16.42px,0);
+
+
+
+  &__label {
+  }
+
+  &__list {
+    color: $gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7.8em;
+    border: none;
+    appearance: none;
+  }
+
+  &__item {
+    color: $black;
+  }
+}

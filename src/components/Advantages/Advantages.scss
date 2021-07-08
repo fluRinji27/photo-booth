@@ -1,0 +1,49 @@
+@import "src/assets/_variables";
+@import "src/assets/_mixins";
+
+.advantages {
+  margin-top: 62px;
+
+  &__title {
+    color: $red;
+    @include robotoSlab(40px, bold, 50px, 0);
+
+    span {
+      color: $black;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 24px;
+    @include workSans(16px, 400, 21px, 0);
+
+    span {
+      color: $red;
+      text-decoration: underline;
+      text-align: start;
+    }
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+
+  &__item {
+    display: grid;
+    width: 140px;
+    margin-top: 30px;
+  }
+
+  &__icon {
+    align-self: center;
+    justify-self: center;
+  }
+
+  &__text {
+    margin-top: 3px;
+    text-align: center;
+    @include robotoRegular(14px, 600, 17px, 0);
+  }
+}

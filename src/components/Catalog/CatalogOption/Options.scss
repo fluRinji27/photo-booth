@@ -1,0 +1,107 @@
+@import "../../../assets/_variables";
+@import "../../../assets/_mixins";
+
+.options {
+  margin-top: 20px;
+
+  &__title {
+    display: inline;
+    @include workSans(13px, 600, 14px, 1px);
+    color: $red;
+    padding: 0 4px;
+    border-bottom: 1px solid $red;
+  }
+
+  &__list {
+    height: 150px;
+    overflow-y: scroll !important;
+    scrollbar-width: thin;
+    scrollbar-color: red #EBEBEB;
+
+
+    &::-webkit-scrollbar {
+      width: 3px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: #EBEBEB;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      width: 2px;
+      background-color: red;
+      border-radius: 2px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: green;
+    }
+
+  }
+
+  &__item {
+    display: grid;
+    grid-template-areas:
+            'img tittle check'
+            'img price check';
+    border-top: 1px solid rgba(235, 235, 235, 1);
+    padding: 0 9px 9px 9px;
+    align-items: center;
+
+    &:first-child {
+      border: none;
+    }
+  }
+
+  &__img {
+    grid-template: 'img';
+  }
+
+  &__info {
+    height: 100%;
+  }
+
+  &__info-item {
+    padding: 8px;
+  }
+
+  &__text {
+    grid-template: 'title';
+    @include workSans(14px, 600, 18px, .3px);
+  }
+
+  &__price {
+    grid-template: 'price';
+    @include robotoSlab(12px, 500, 18px, .3px);
+    color: $red;
+  }
+
+  &__checkbox {
+    grid-template: 'check';
+    position: relative;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    color: transparent;
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    box-shadow: none;
+    border: 1px solid red;
+    border-radius: 2px;
+
+    &::before {
+      content: '';
+      background-image: url(../../../assets/img/checkMark.svg);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      color: black;
+    }
+
+    &:checked {
+      background-color: red;
+    }
+  }
+
+}

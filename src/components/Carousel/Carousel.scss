@@ -1,0 +1,90 @@
+@import "../../assets/_variables";
+
+.slider {
+  margin-top: 30px;
+  overflow: hidden;
+
+  &__item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 230px;
+
+    img {
+      width: 85%;
+      height: 100%;
+    }
+
+    &[aria-selected="false"] {
+      img {
+        position: absolute;
+        left: -30px;
+      }
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__btn {
+    position: absolute;
+    top: 5.6em;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 2px;
+    background-color: rgba(0, 0, 0, 0.24);
+
+    .arrow {
+      width: 15px;
+      height: 15px;
+      border-color: #fff;
+      opacity: .7;
+    }
+  }
+
+  &__back {
+    left: .2%;
+  }
+
+  &__next {
+    right: 15%;
+  }
+}
+
+
+// Переопределение базовых стилей слайдера
+.carousel {
+  &__inner-slide {
+    align-items: center;
+  }
+
+  &__dot-group {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__dot {
+    margin: 8px;
+    background-color: rgba(213, 218, 224, 1);
+    border: 1px solid transparent;
+    border-radius: 10px;
+
+    span {
+      display: block;
+      height: 1px;
+    }
+  }
+
+  &__dot--selected {
+    background-color: $red;
+
+    span {
+      width: 8px;
+    }
+  }
+}
